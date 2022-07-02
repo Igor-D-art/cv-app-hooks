@@ -1,0 +1,253 @@
+.App {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* General containers for all of the components */
+
+.controls, .views{
+  width: 210mm;
+  margin: 3px;
+  border: 1px solid gray;
+}
+
+/* .controls{
+  display: none;
+} */
+
+/* General section CSS */
+
+.general-info-contr, .general-info-view{
+  width: 65%;
+}
+
+.name{
+  font-size: xx-large;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+#image{
+  visibility: hidden;
+}
+
+label{
+  display: flex;
+  height: 250px;
+  width: 200px;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.general-img-view{
+  border: 1px solid black;
+  width: 200px;
+  height: 260px;
+  margin-right: 40px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.general-controllers, .general-view{
+  display: flex;
+  justify-content: flex-start;
+  margin: 15px 10px 0px 25px;
+  background-color: beige;
+}
+
+.general-view>div{
+  margin: 5px;
+}
+
+.general-details-view, details{
+  line-height: 1.3;
+  white-space: pre-line;
+}
+
+.general-details-contr>textarea{
+  width: 95%;
+  resize: vertical;
+}
+
+.general-links-view{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.addLink{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100px;
+}
+
+/* Summary section CSS */
+
+.summary-contr, .summary-view, .certs-view, .educ-container-view {
+  /* margin: 5px 10px 0px 25px; */
+  padding: 5px 40px 0px 40px;
+  white-space: pre-wrap;
+  height: fit-content;
+  line-height: 1.3;
+}
+
+.summary{
+  resize: vertical;
+  width: 99%;
+  
+}
+
+
+/* Experience VIEW and CONTROLLERS CSS */
+
+.experience-views, .experience-controllers, .certifications-contr, .educations-controllers{
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  line-height: 1.3;
+  resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.experience-title, .summary-title, .education-title{
+  font-size: x-large;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px 10px 10px 10px;
+}
+
+.exp-container-view, 
+.exp-container-contr,
+.cert-contr, 
+.educ-container-contr{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  padding: 5px 40px 0px 40px;
+}
+
+.exp-container-view p, 
+.exp-container-view h2, 
+.exp-container-view div {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.title-v{
+  font-size: larger;
+  font-weight: bold;
+}
+
+.company-v{
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.from-to-view, 
+.exp-details-view, 
+.from-to-contr, 
+.exp-details-contr {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  position: relative;
+}
+
+.from-to-view,
+.from-to-contr, 
+.year-contr, 
+.year-view {
+  width: 25%;
+}
+
+.exp-details-view,
+.exp-details-contr,
+.univ-contr, 
+.univ-view {
+  width: 75%;
+}
+
+.activ-v{
+  white-space: pre-line;
+  line-height: 1.3;
+}
+
+/* Experience CONTROLLERS ONLY CSS */
+
+.exp-container-contr input,  
+.exp-container-contr textarea, 
+.cert-contr input, 
+.educ-container-contr input, 
+.univ-contr textarea {
+  width: 90%;
+}
+
+.addExp, .addCert, .addEduc{
+  position: relative;
+  width: 50%;
+  margin: 10px 0px 10px 40px;
+
+  align-self: flex-start;
+  height: 25px;
+}
+
+.exp-container-contr>button, .cert-contr>button, .educ-containr-contr>button{
+  margin-right: 15px;
+}
+
+/* Certifications CSS */
+
+.certs-view {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Education CSS */
+
+.educations-controllers{
+  margin-bottom: 40px;
+}
+
+.educ-container-view{
+  display: flex;
+}
+
+
+
+@media print {
+  .App * {
+    visibility: hidden;
+  }
+
+  .views,
+  .views * {
+    visibility: visible;
+  }
+
+  .views {
+    position: absolute;
+    height: auto;
+    left: 0;
+    top: 0;
+    border: none;
+    margin: 0px;
+  }
+}
+
+
